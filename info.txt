@@ -1,0 +1,9 @@
+//exportar estandard
+export COBOPT="-std=mf"
+
+//compilar
+cobc -std=mf -x -o main main.cob
+
+//ejecutar
+./main
+
