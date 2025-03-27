@@ -18,15 +18,12 @@
 
            ADD NUM1 TO NUM2 GIVING RESULT.
            DISPLAY NUM1 "+" NUM2 "=" RESULT.
-
-           SUBTRACT NUM1 FROM NUM2 GIVING RESULT.
-           DISPLAY NUM1 "-" NUM2 "=" RESULT. 
-
-           MULTIPLY NUM1 BY NUM2 GIVING RESULT.
-           DISPLAY NUM1 "x" NUM2 "=" RESULT.
-
-           DIVIDE NUM1 BY NUM2 GIVING RESULT.
-           DISPLAY NUM1 "x" NUM2 "=" RESULT. 
+                      
+           IF RESULT>50 
+               DISPLAY  RESULT ">50"
+           ELSE
+               DISPLAY RESULT "<=50"
+           END-IF.
 
            STOP RUN.
 
