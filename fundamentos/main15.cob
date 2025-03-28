@@ -13,12 +13,10 @@
            PERFORM MAIN.
            
            MAIN.
-               MOVE 1 TO NUM.
-               PERFORM RUTINA 10 TIMES.
-               STOP RUN. 
+               PERFORM VARYING NUM FROM 5 BY 5 UNTIL NUM>100
+                   DISPLAY NUM
+               END-PERFORM.
 
-           RUTINA.
-               DISPLAY "NUMERO: " NUM.
-               COMPUTE NUM = NUM + 1. 
-            
+               STOP RUN. 
+  
        END PROGRAM programa.
