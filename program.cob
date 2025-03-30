@@ -5,9 +5,9 @@
            
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-           
-           
+       
        PROCEDURE DIVISION.
-           
 
+       STOP RUN. 
+          
        END PROGRAM programa.
