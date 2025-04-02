@@ -1,29 +1,29 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. programa.
+       PROGRAM-ID. program.
            
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        
        DATA DIVISION.
-       WORKING-STORAGE SECTION.
-           01 NUMBER1  PIC 9(5) VALUE 10.
-           01 NUMBER2  PIC 9(5) VALUE 20.
-           01 AUX      PIC 9(5).
-           
+           WORKING-STORAGE SECTION.
+               77 num PIC S9(2) VALUE ZEROES.
+               77 modulus PIC 9(2) VALUE ZEROES.
+               77 result PIC S9(2) VALUE ZEROES. 
+
        PROCEDURE DIVISION.
-       
-           DISPLAY "NUMERO 1: " NUMBER1.
-           DISPLAY "NUMERO 2: " NUMBER2.
-
-           DISPLAY "intercambio:" .
-
-           MOVE NUMBER2 TO aux.
-           MOVE NUMBER1 TO NUMBER2.
-           MOVE aux TO NUMBER1.
            
-           DISPLAY "NUMERO 1: " NUMBER1.
-           DISPLAY "NUMERO 2: " NUMBER2.
+           PERFORM MAIN.
+           MAIN.
+               DISPLAY "Introduzca un numero: "  WITH NO ADVANCING.
+               ACCEPT num. 
+               DIVIDE num BY 2 GIVING result REMAINDER modulus.
            
-           STOP RUN.
+               IF modulus = 0 THEN 
+                   DISPLAY num " es Par"
+               ELSE 
+                   DISPLAY num " es Impar"
+               END-IF.
 
-       END PROGRAM programa.
+               STOP RUN.
+
+       END PROGRAM program.

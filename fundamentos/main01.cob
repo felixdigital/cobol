@@ -1,14 +1,18 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. programa.
+       PROGRAM-ID. program.
 
        ENVIRONMENT DIVISION.
            
        DATA DIVISION.
-       WORKING-STORAGE SECTION.
-           01 MSG PIC X(80) VALUE 'Hola mundo!!!'.
+           WORKING-STORAGE SECTION.
+               77 msg PIC X(12) VALUE 'Hola mundo!!'.
            
        PROCEDURE DIVISION.
-           DISPLAY MSG.
-           STOP RUN.
+           
+           PERFORM MAIN.
+           MAIN.
+               DISPLAY msg.
+               DISPLAY "Bienvenidos". *>comentario
+               STOP RUN.
 
-       END PROGRAM programa.
+       END PROGRAM program.

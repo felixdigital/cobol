@@ -1,27 +1,42 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. programa.
+       PROGRAM-ID. program.
            
        ENVIRONMENT DIVISION.
       
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-           01 NUM  PIC 9(5) VALUE 0.
-           01 MODULUS PIC 9(5) VALUE 0. 
-           
+           77 a  PIC S9(2) VALUE ZEROS.
+           77 b  PIC S9(2) VALUE ZEROS.
+           77 c  PIC S9(2) VALUE ZEROS.
+           77 discriminante PIC S9(3)V9(2) VALUE ZEROS. 
+           77 x1 PIC S9(3)V9(2) VALUE ZEROS. 
+           77 x2 PIC S9(3)V9(2) VALUE ZEROS.    
+       
        PROCEDURE DIVISION.
-           DISPLAY "Ingrese un numero: ".
-           ACCEPT NUM.
+           
+           PERFORM MAIN.
+           MAIN.
 
-           COMPUTE MODULUS = NUM / 2 .
-           COMPUTE MODULUS = MODULUS * 2 .
-           COMPUTE MODULUS = NUM - MODULUS .
-
-           IF MODULUS = 0
-               DISPLAY "PAR"
+           MOVE -6 TO a.
+           MOVE -5 TO b.
+           MOVE -3 TO c.
+           
+           COMPUTE discriminante = (b * b) - (4 * a * c).
+           DISPLAY "Discriminante: " discriminante.
+           
+           IF discriminante > 0 THEN 
+                COMPUTE x1 = (-b + FUNCTION SQRT(discriminante))/(2*a)
+                COMPUTE x2 = (-b - FUNCTION SQRT(discriminante))/(2*a)
+                DISPLAY "x1=" x1 " x2="x2
            ELSE
-               DISPLAY "IMPAR"
-           END-IF
+                   IF discriminante = 0 THEN 
+                        COMPUTE x1 = -b/(2*a)
+                        DISPLAY "x1=" x1 
+                   ELSE
+                       DISPLAY "Sin solución real"
+                   END-IF
+           END-IF.
 
            STOP RUN.
 
-       END PROGRAM programa.
+       END PROGRAM program.
