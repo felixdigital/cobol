@@ -33,12 +33,11 @@
                DISPLAY "Ingrese un numero: " WITH NO ADVANCING.
                ACCEPT num.
 
-               *>COMPUTE result = num * 2.
                MULTIPLY num BY 2 GIVING result. 
 
                DISPLAY "El doble de " num " es " result.
 
-               *>grabar en el fichero
+               *> grabar en el fichero
                OPEN EXTEND fichero-file.     *> abrir para añadir
                MOVE num TO fichero-valor.
                WRITE fichero-reg.

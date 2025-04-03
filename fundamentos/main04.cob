@@ -15,7 +15,8 @@
            PERFORM MAIN.
            MAIN.
                DISPLAY "Introduzca un numero: "  WITH NO ADVANCING.
-               ACCEPT num. 
+               ACCEPT num.
+               
                DIVIDE num BY 2 GIVING result REMAINDER modulus.
            
                IF modulus = 0 THEN 
