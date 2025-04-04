@@ -2,41 +2,36 @@
        PROGRAM-ID. program.
            
        ENVIRONMENT DIVISION.
-      
-       DATA DIVISION.
-       WORKING-STORAGE SECTION.
-           77 a  PIC S9(2) VALUE ZEROS.
-           77 b  PIC S9(2) VALUE ZEROS.
-           77 c  PIC S9(2) VALUE ZEROS.
-           77 discriminante PIC S9(3)V9(2) VALUE ZEROS. 
-           77 x1 PIC S9(3)V9(2) VALUE ZEROS. 
-           77 x2 PIC S9(3)V9(2) VALUE ZEROS.    
+       CONFIGURATION SECTION.
        
+       DATA DIVISION.
+       WORKING-STORAGE SECTION. 
+           77 num  PIC 9(2) VALUE ZEROS.
+            
        PROCEDURE DIVISION.
+
+       PERFORM MAIN.
            
-           PERFORM MAIN.
            MAIN.
+               MOVE 5 TO num.
 
-           MOVE -6 TO a.
-           MOVE -5 TO b.
-           MOVE -3 TO c.
-           
-           COMPUTE discriminante = (b * b) - (4 * a * c).
-           DISPLAY "Discriminante: " discriminante.
-           
-           IF discriminante > 0 THEN 
-                COMPUTE x1 = (-b + FUNCTION SQRT(discriminante))/(2*a)
-                COMPUTE x2 = (-b - FUNCTION SQRT(discriminante))/(2*a)
-                DISPLAY "x1=" x1 " x2="x2
-           ELSE
-                   IF discriminante = 0 THEN 
-                        COMPUTE x1 = -b/(2*a)
-                        DISPLAY "x1=" x1 
-                   ELSE
-                       DISPLAY "Sin solución real"
-                   END-IF
-           END-IF.
+               IF num = 5 THEN 
+                   DISPLAY "5"
+               ELSE 
+                   DISPLAY "Otro valor"
+               END-IF.
 
+               MOVE 8 TO num.
+
+               EVALUATE num
+                   WHEN 5
+                       DISPLAY "5"
+                   WHEN 8
+                       DISPLAY "8"
+                   WHEN OTHER
+                       DISPLAY "Otro valor"
+               END-EVALUATE.
+               
            STOP RUN.
 
        END PROGRAM program.

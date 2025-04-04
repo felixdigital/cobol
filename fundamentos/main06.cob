@@ -35,6 +35,4 @@
 
                STOP RUN.
            
-         
-
        END PROGRAM program.

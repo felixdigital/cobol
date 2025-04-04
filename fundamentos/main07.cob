@@ -1,30 +1,21 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. programa.
-           
-       ENVIRONMENT DIVISION.
-       CONFIGURATION SECTION.
-       
-       DATA DIVISION.
-       WORKING-STORAGE SECTION. 
-           01 NUM1  PIC 9(5) VALUE 0.
-           01 NUM2  PIC 9(5) VALUE 0.
-           01 RESULT PIC 9(5) VALUE 0.
-          
-       PROCEDURE DIVISION.
-           DISPLAY "Introduce el primer numero: ".
-           ACCEPT NUM1.
-           DISPLAY "Introduce el segundo numero: ".
-           ACCEPT NUM2.
 
-           ADD NUM1 TO NUM2 GIVING RESULT.
-           DISPLAY NUM1 "+" NUM2 "=" RESULT.
-                      
-           IF RESULT>50 
-               DISPLAY  RESULT ">50"
-           ELSE
-               DISPLAY RESULT "<=50"
-           END-IF.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+           77 i PIC 9 VALUE 1.
+
+           01 seasons PIC X(36) 
+               VALUE "primaveraverano   otoño   invierno ".
+
+           01 tseason REDEFINES seasons.
+               05 season PIC X(9) OCCURS 4 TIMES.
+
+       PROCEDURE DIVISION.
+           PERFORM VARYING i FROM 1 BY 1 UNTIL i > 4
+               DISPLAY season(i)
+           END-PERFORM.
 
            STOP RUN.
 
-       END PROGRAM programa.
+       END PROGRAM program.

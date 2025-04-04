@@ -1,33 +1,22 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. programa.
-           
-       ENVIRONMENT DIVISION.
-       CONFIGURATION SECTION.
-       
+
        DATA DIVISION.
-       WORKING-STORAGE SECTION. 
-           01 NUM1  PIC 9(5) VALUE 0.
-           01 NUM2  PIC 9(5) VALUE 0.
-           01 RESULT PIC 9(5) VALUE 0.
-          
-       PROCEDURE DIVISION.
-
-       PERFORM ROUTINE01.
-       STOP RUN.
-
-       ROUTINE01.
-           DISPLAY "RUTINA 01".
-           PERFORM ROUTINE03.
-
-       ROUTINE02.
-           DISPLAY "RUTINA 02".
-           PERFORM ROUTINE04.
-
-       ROUTINE03.
-           DISPLAY "RUTINA 03".
-           PERFORM ROUTINE02.
-       ROUTINE04.
-           DISPLAY "RUTINA 04".
-           DISPLAY "FIN".
+       WORKING-STORAGE SECTION.
+           77 i PIC 9 VALUE 1.
+           77 seasons PIC X(9) OCCURS 4 TIMES JUST RIGHT.
            
-       END PROGRAM programa.
+       PROCEDURE DIVISION.
+           
+           MOVE "primavera" to seasons(1).
+           MOVE "verano" to seasons(2).
+           MOVE "otoño" to seasons(3).
+           MOVE "invierno" to seasons(4).
+
+           PERFORM VARYING i FROM 1 BY 1 UNTIL i > 4
+               DISPLAY seasons(i)
+           END-PERFORM.
+
+           STOP RUN.
+
+       END PROGRAM program.

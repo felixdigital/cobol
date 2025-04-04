@@ -20,17 +20,13 @@
                PERFORM MOSTRAR-DATOS.
 
                STOP RUN.
-
            SOLICITAR-DATOS.
                DISPLAY "Numero: " WITH NO ADVANCING.
-               ACCEPT num.
-           
+               ACCEPT num.  
            CALCULOS.
                DIVIDE num BY 23 GIVING result REMAINDER modulus.
-
            MOSTRAR-DATOS.
                DISPLAY "DNI: " num "-" arrModulus(modulus + 1).
-
            LOAD-ARRAY.
             	 MOVE 'T' TO arrModulus(1).
                  MOVE 'R' TO arrModulus(2).
