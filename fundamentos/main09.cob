@@ -6,7 +6,10 @@
        
        DATA DIVISION.
        WORKING-STORAGE SECTION. 
-           77 cadena PIC X(30) VALUE "felixdigital@gmail.com".
+           
+           
+           77 x PIC 99 VALUE 30.
+           77 cadena PIC X(x) VALUE "felixdigital@gmail.com".
            77 lenCadena PIC 99 VALUE ZEROS.
            77 i PIC 99 VALUE ZEROS.
            77 len PIC 99 VALUE ZEROS.

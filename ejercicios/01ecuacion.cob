@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. program.
+       PROGRAM-ID. ecuacion.
            
        ENVIRONMENT DIVISION.
       
@@ -39,4 +39,4 @@
 
            STOP RUN.
 
-       END PROGRAM program.
+       END PROGRAM ecuacion.
