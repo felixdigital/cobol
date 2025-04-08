@@ -1,14 +1,14 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. programa.
+       PROGRAM-ID. program.
            
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-           01 FIRSTNAME PIC X(15).
-           01 SURNAME PIC X(20).
-           01 YEARS PIC 9(2).
+           77 FIRSTNAME PIC X(15).
+           77 SURNAME PIC X(20).
+           77 YEARS PIC 9(2).
 
        PROCEDURE DIVISION.
 
@@ -33,4 +33,4 @@
                DISPLAY "Introduzca su edad".
                ACCEPT YEARS.
            
-       END PROGRAM programa.
+       END PROGRAM program.

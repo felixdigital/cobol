@@ -24,9 +24,5 @@
                        DISPLAY RESULT
                END-COMPUTE.
 
-             
-
-             
-
     
        END PROGRAM programa.
