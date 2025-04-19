@@ -1,0 +1,16 @@
+       01 CONTRATO-REG.
+           05 CODIGO          PIC X(5).
+           05 NIF             PIC X(9).
+           05 NOMBRE          PIC X(30).
+           05 IMP-LIM         PIC 9(4)V99.
+           05 FEC-FIN.
+                 10 YEAR PIC X(4).
+                 10 FILLER PIC X.
+                 10 MONTH PIC X(2).
+                 10 FILLER PIC X.
+                 10 DAYM PIC X(2).
+                 10 FILLER PIC X.
+           05 FILLER          PIC X(20).
+           
+
+           

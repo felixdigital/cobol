@@ -17,16 +17,19 @@
                    ADD 1 TO i
                END-PERFORM.
 
+               *>while 
                MOVE 1 TO i. 
                PERFORM UNTIL i > 5
                    DISPLAY i
                    ADD 1 TO i
                END-PERFORM.
 
+               *>for
                PERFORM VARYING i FROM 1 BY 1 UNTIL i>5
                  DISPLAY i
                END-PERFORM.
 
+               *>repeat
                MOVE 1 TO i. 
                PERFORM WITH TEST AFTER UNTIL i>10
                   DISPLAY i
